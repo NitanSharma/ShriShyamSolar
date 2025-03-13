@@ -1,90 +1,377 @@
 body{
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Ensure all elements fit within the viewport */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+/* Navbar */
+.navbar{
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin-bottom: 50px;
-}
-img{
-    height: 100px;
-    width: 100%;
-}
-.nav-link:hover{
-    color: orange !important;
-}
-.navbar-nav{
-    margin-left: 60% !important;
+    height: 7rem;
+    background-color:white;
 }
 .nav-link{
-    color: black;
+    color: #222222 !important;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
 }
-footer {
-    position: fixed;
-    bottom: 0; 
-    width: 100%;
-  
+.nav-link:hover{
+    color: #87CEEB !important;
+}
+ .nav-btn{
+    font-weight: bold;
+    background-color: #87CEEB;
+    font-size: 25px;
 }
 
-.f-info{
+.subsidy{
     display: flex;
-    align-items:center;
-    text-align: center;
-    justify-content: space-between;
-    padding-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #87CEEB;
 }
-.f-links , .f-service , .f-subscribe{
+/* Hero section */
+ /* Full viewport height for carousel */
+ .carousel-item {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Centered text */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.carousel-caption h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Small arrow icons for navigation */
+.carousel-control-prev, .carousel-control-next {
+    width: auto;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+    margin-left: 20px; /* Adjust left margin */
+}
+
+.carousel-control-next {
+    margin-right: 20px; /* Adjust right margin */
+}
+
+.carousel-control-prev i, .carousel-control-next i {
+    font-size: 30px; /* Icon size */
+    color: black; /* Black color icon */
+}
+/* Why solar 
+ /* Section Styling */
+ /* Wide Horizontal Line */
+ .solar-wide-line {
+    width: 60%; /* Reduced width */
+    height: 10px;
+    background-color: #6c8ebf; /* Gray-blue color */
+    margin: 40px auto; /* Centered and added top margin */
+}
+ .solar-benefits {
+    text-align: center;
+    padding: 50px 0;
+    height: 100vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.f-info a , .f-service a {
-    text-decoration: none;
-    color: black;
+ .solar-section {
+    text-align: center;
+    margin-top: 60px; 
+} 
+.solar-divider {
+    border-top: 4px dotted #6c8ebf; /* Bold dotted line */
+    width: 90%;
+    margin: 40px auto;
+}
+.solar-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; /* Centering the title */
+    margin-top: 90px;
 }
 
-/* FORM STYLING */
-.container-form {
-    display: flex;
-    width: 80%;
-    background-color: skyblue;
-    padding: 20px;
-    border-radius: 10px;
+.solar-subtitle {
+    font-size: 2.5rem; /* Bigger size */
+    font-weight: bold;
+    margin-top: 30px;
 }
-.left {
-    flex: 1;
-    padding: 20px;
-}
-.right {
-    flex: 1;
-    padding: 20px;
-}
-.form-container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-label {
-    display: block;
+
+.solar-description {
+    font-size: 1.5rem; /* Larger text */
+    color: #555;
     margin-top: 10px;
 }
-input, select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+/* Extra spacing for middle part */
+.middle-section {
+    margin: 50px 0;
 }
-button {
+/* Benefits Grid */
+.solar-benefits-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Increased spacing */
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+/* Bootstrap Card Styling */
+.benefit-item {
+    width: 220px; /* Adjust card width */
+    border: none; /* Remove default border */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); /* Light shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+/* Hover Effect */
+.benefit-item:hover {
+    transform: translateY(-10px); /* Slight pop-up */
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25); /* Increased shadow */
+}
+/* Card Image */
+.benefit-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+/* Text Styling */
+.card-text {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.benefit-item p {
     margin-top: 15px;
-    padding: 10px;
-    width: 100%;
-    background-color: orange;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: darkorange;
+    font-size: 1.3rem; /* Bigger text */
+    font-weight: bold;
 }
 
+                /*  ABOUT SECTION  */
+
+/* About Us Main Container */
+.about-us {
+    width: 100%; /* Full width */
+    margin-top: 80px; /* Added top margin */
+    padding: 50px 5%;
+    background-color: #f8f9fa;
+}
+
+/* Left Side (Image) */
+.about-image-container {
+    padding: 20px; /* Added padding for spacing */
+}
+
+.about-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Right Side (Text) */
+.about-text {
+    padding: 40px 50px; /* Added padding for better spacing */
+}
+
+/* About Us Heading */
+.about-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left; 
+    color: #0096FF;
+    margin-bottom: 20px;
+}
+
+/* Text Styling */
+.about-text p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .about-us {
+        margin-top: 50px;
+        padding: 50px 5%;
+    }
+
+    .about-text,
+    .about-image-container {
+        padding: 20px; /* Ensuring spacing remains on smaller screens */
+    }
+
+    .about-heading {
+        font-size: 1.8rem;
+        text-align: right; /* Keep heading right-aligned */
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-heading {
+        font-size: 1.6rem;
+        text-align: center; /* Center heading on mobile */
+    }
+
+    .about-text,
+    .about-image-container {
+        padding: 20px; /* Keeping margin on smaller screens */
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+/*  Type of Solar Systems */
+/* Types of Solar Systems Main Container */
+.solar-types {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 40px;
+    margin: 0 auto; /* Center the container */
+    max-width: 90%; /* Control overall width */
+}
+/* Heading Styling */
+.solar-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styling */
+.solar-description {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    line-height: 1.6;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+/* Card Styling */
+.solar-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Card Hover Effect */
+.solar-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Image */
+.solar-card img {
+    border-radius: 10px 10px 0 0;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Card Text */
+.solar-card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+
+.solar-card .card-text {
+    font-size: 1rem;
+    color: #666;
+}
+.solar-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .solar-types {
+        height: auto;
+        padding: 50px 5%;
+        max-width: 95%;
+    }
+
+    .solar-heading {
+        font-size: 2.5rem;
+    }
+
+    .solar-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .solar-heading {
+        font-size: 2rem;
+    }
+    .solar-types {
+        margin: 20px auto;
+        max-width: 98%;
+    }
+    .solar-description {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .solar-card {
+        margin-bottom: 20px;
+    }
+}
