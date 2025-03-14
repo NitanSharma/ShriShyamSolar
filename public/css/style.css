@@ -33,6 +33,75 @@ html {
     background-color: #87CEEB;
     font-size: 25px;
 }
+/* Responsive for mobile */
+/* Navbar logo adjustments for smaller screens */
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adjust navbar padding for better spacing */
+.navbar {
+    padding: 10px 20px;
+}
+
+/* Ensure the navbar links stack properly on mobile */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 200px; /* Reduce logo size for mobile */
+        height: auto;
+    }
+
+    .navbar-collapse {
+        text-align: center; /* Center align nav items */
+        background: white; /* Ensure visibility on collapse */
+        padding: 10px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .navbar-collapse {
+        text-align: center;
+        background: white; /* Optional: Background for dropdown */
+    }
+    
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+    }
+
+    .nav-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+.navbar-toggler {
+    border: none !important; /* Remove border */
+    outline: none !important;
+}
+
+.navbar-toggler-icon {
+    background-color:transparent; /* Ensures it's visible */
+    width: 30px;
+    height: 30px;
+    color: #000;
+}
+
 
 .subsidy{
     display: flex;
@@ -40,6 +109,22 @@ html {
     justify-content: center;
     background-color: #87CEEB;
 }
+.subsidy h4 {
+    font-size: 1.5rem; /* Default for larger screens */
+}
+
+@media (max-width: 768px) {
+    .subsidy h4 {
+        font-size: 1.2rem; /* Slightly smaller on tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .subsidy h4 {
+        font-size: 1rem; /* Smaller font for mobile screens */
+    }
+}
+
 /* Hero section */
  /* Full viewport height for carousel */
  .carousel-item {
@@ -181,6 +266,88 @@ html {
     margin-top: 15px;
     font-size: 1.3rem; /* Bigger text */
     font-weight: bold;
+}
+/* Responsive Design */
+@media (max-width: 992px) {
+    .solar-benefits {
+        padding: 40px 5%;
+        margin: 30px auto;
+    }
+
+    .solar-title {
+        font-size: 2.5rem;
+    }
+
+    .solar-subtitle {
+        font-size: 1.8rem;
+    }
+
+    .solar-description {
+        font-size: 1rem;
+    }
+
+    .solar-benefits-container {
+        gap: 15px;
+    }
+
+    .benefit-item {
+        width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .solar-benefits {
+        padding: 30px 3%;
+        margin: 20px auto;
+    }
+
+    .solar-title {
+        font-size: 2rem;
+    }
+
+    .solar-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .solar-description {
+        font-size: 0.95rem;
+    }
+
+    .solar-divider {
+        width: 90%;
+    }
+
+    .benefit-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .solar-benefits {
+        padding: 20px 2%;
+    }
+
+    .solar-title {
+        font-size: 1.8rem;
+    }
+
+    .solar-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .solar-description {
+        font-size: 0.9rem;
+    }
+
+    .solar-divider {
+        width: 95%;
+    }
+
+    .benefit-item {
+        width: 100%;
+        max-width: 280px;
+    }
 }
 
                 /*  ABOUT SECTION  */
@@ -374,4 +541,155 @@ html {
     .solar-card {
         margin-bottom: 20px;
     }
+}
+
+/* FORM */
+.parent-div {
+    background-color: #87CEEB; /* Baby blue */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 90%; /* Increased width */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto; /* Centers the div */
+}
+.left-div {
+    /* background-color: #0096FF; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    color: #222222;
+    border-radius: 10px;
+    padding: 20px;
+}
+.left-div h2{
+    font-size: 40px;
+}
+.left-div p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.form-container {
+    background: white;
+    padding: 50px; /* Increased padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 600px; /* Further increased form height */
+    width: 90%; /* Increased form width */
+    margin: auto; /* Centers the form */
+}
+.form-label, .form-control, .btn {
+    font-size: 1.2rem; /* Increased text size for better alignment */
+}
+
+.form-control {
+    appearance: auto !important;
+    background-color: white !important;
+    padding: 14px; /* More padding for better spacing */
+}
+
+.mb-3 {
+    margin-bottom: 30px !important; /* Increased space between input elements */
+}
+@media (max-width: 768px) {
+    .parent-div {
+        padding: 20px;
+        height: auto;
+    }
+    .left-div {
+        margin-bottom: 20px;
+    }
+}
+
+.custom-container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.image-container img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.content h1{
+    color: #0096FF;
+}
+.content p{
+    font-size: 18px;
+    margin-top: 20px;
+}
+/* Brand Partnerships Section */
+.brand-partners {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+.brand-partners h1{
+    font-size: 60px;
+    color: #0096FF;
+}
+.logo-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.logo-container img {
+    width: 200px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    object-fit: contain; /* Ensures proper scaling */
+    border-radius: 10px;
+}
+
+/* FOOTER */
+.footer {
+    background-color:#A7C7E7; /* Baby blue */
+    padding: 30px 0;
+    margin-top: auto; /* Sticks footer to the bottom */
+    font-size: 18px;
+}
+.footer-logo {
+    width: 300px; /* Adjust logo size */
+}
+.footer a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+.footer a:hover {
+   color: #007bff;
+}
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+}
+.social-icons a {
+    font-size: 22px;
+    margin-right: 15px;
+    color: black;
+}
+h5{
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    color: #007bff;
 }

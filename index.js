@@ -1,8 +1,7 @@
 if(process.env.NODE_ENV != "production"){
     require('dotenv').config()
 }
-// console.log(process.env.ATLASDB_URL)
-
+console.log( process.env.ATLASDB_URL);
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -16,42 +15,33 @@ app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));// for public folder
 app.use(express.urlencoded({extended : true}));
 
-// let dbUrl = process.env.ATLASDB_URL;
+let dbUrl = process.env.ATLASDB_URL;
 main().then(() => {console.log("Connected to DB")}).catch(err => console.log(err));
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/shreeshyam');
+    await mongoose.connect(dbUrl);
 }
-
 app.get("/" , (req,res) => {
     res.render("home.ejs");
 })
 app.get("/register" , (req,res) => {
-    res.send("you are register");
+    res.send("hello");
 })
-app.post("/register", (req,res) => {
-            let {name , email , contact , city , requirement , msg } = req.body;
-            let newClient =  new Client({name , email , contact , city , requirement , msg});
-            newClient.save().then((res) => {console.log(res)}).catch((err) => {console.log(err)});
-            res.redirect("/");       
-    })
-
+app.post("/register" , (req,res) => {
+    console.log(req.body);
+    let {name , contact , city , requirement ,bill, msg } = req.body;
+    let newClient =  new Client({name ,contact , city , requirement , bill, msg});
+    newClient.save().then((res) => {console.log(res)}).catch((err) => {console.log(err)});
+    res.redirect("/");    
+})
+app.get("/gallery", (req,res) => {
+    res.render("gallery.ejs");
+})
+app.get("/our-services" , (req,res) => {
+    res.render("services.ejs");
+})
+app.get("/contact-us", (req, res) => {
+    res.render("contact-us.ejs");
+})
 app.listen(8080, () => {
     console.log("app is listening on port 8080");
 })
-
-
-
-
-
-// app.get("/about-us", (req,res) => {
-//     res.render("aboutUs");
-// })
-// app.get("/gallery", (req,res) => {
-//     res.render("gallery.ejs");
-// })
-// app.get("/blogs", (req,res) => {
-//     res.render("blogs.ejs");
-// })
-// app.get("/contact-us", (req,res) => {
-//     res.render("contactUs.ejs");
-// })
