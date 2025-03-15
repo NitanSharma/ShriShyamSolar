@@ -15,10 +15,10 @@ app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));// for public folder
 app.use(express.urlencoded({extended : true}));
 
-let dbUrl = process.env.ATLASDB_URL;
+// let dbUrl = process.env.ATLASDB_URL;
 main().then(() => {console.log("Connected to DB")}).catch(err => console.log(err));
 async function main() {
-    await mongoose.connect(dbUrl);
+    await mongoose.connect('mongodb://127.0.0.1:27017/shreeshyam');
 }
 app.get("/" , (req,res) => {
     res.render("home.ejs");

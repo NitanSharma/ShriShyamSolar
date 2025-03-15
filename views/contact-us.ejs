@@ -1,4 +1,165 @@
 <% layout("boilerplate.ejs") %>
+<style>
+    /* Banner Section */
+    .banner {
+            width: 90%;
+            height: 500px;
+            background: url('contactbanner.avif') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+         /* Full height container */
+         .contact-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Left Section */
+        .contact-left {
+           color: black;
+            padding: 50px;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .contact-left h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-card {
+            background-color: #87CEEB;
+            padding: 15px;
+            border-radius: 8px;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .contact-card h3 , h5{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Right Section */
+        .contact-right {
+            padding: 50px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .contact-right h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .contact-left {
+                border-radius: 10px 10px 0 0;
+                text-align: center;
+            }
+            .contact-right {
+                border-radius: 0 0 10px 10px;
+                text-align: center;
+            }
+        }
+</style>
 <body>
-    <h1>Contact-Us</h1>
+    <!-- Banner Section -->
+    <div class="banner">
+        Contact Us
+    </div>
+
+    <div class="container-fluid contact-container">
+        <div class="row w-100">
+            <!-- Left Section -->
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center contact-left">
+                <h2 class="text-center">Get in Touch</h2>
+                <div class="contact-card w-75 my-2 p-3 ">
+                    <h3>📞 Phone</h3>
+                    <h5>+91 7909579769 +91 8966969389</h5>
+                </div>
+                <div class="contact-card w-75 my-2 p-3">
+                    <h3>📧 Email</h3>
+                    <h5>sssolar916@gmail.com</h5>
+                </div>
+                <div class="contact-card w-75 my-2 p-3">
+                    <h3>📍 Address</h3>
+                    <h5>Sch. No. 94, Near Robot Square Indore (MP).</h5>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center contact-right">
+                <h2>Write Us a Message</h2>
+                <!-- Your form can be added here -->
+                <form class="needs-validation" method="post" action="/register" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please enter your name.</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="contact" class="form-label">Contact</label>
+                            <input type="text" class="form-control" name="contact" id="contact" placeholder="Enter your contact" required>
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Please enter your contact number.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" name="city" placeholder="Enter your city" required>
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Please enter your city.</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="requirement" class="form-label">Solar Requirement For</label>
+                            <select class="form-select form-select-lg mb-3" name="requirement" id="requirement" required>
+                                <option value="">Select Requirement</option>
+                                <option value="residential">Residential Solar</option>
+                                <option value="commercial">Commercial Solar</option>
+                                <option value="industrial">Industrial Solar</option>
+                            </select>
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Please select a requirement.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="bill" class="form-label">Monthly Electricity Bill</label>
+                            <input class="form-control" name="bill" id="bill" required>
+                            </input>
+                            <div class="valid-feedback">Looks good!</div>
+                            <div class="invalid-feedback">Please add your monthly bill.</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea style="resize: none" class="form-control" id="message" name="msg" placeholder="Write your message" required></textarea>
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">Please enter your message.</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-info w-100">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
 </body>

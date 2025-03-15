@@ -9,7 +9,7 @@ const clientSchema = mongoose.Schema({
     }
    ,
     contact: {
-        type : Number,
+        type : String,
         required : true,
     } ,
     city : {
