@@ -1,108 +1,57 @@
-body{
-    background-color: #fff;
-    overflow-x: hidden;
-}
-
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-
-/* Ensure all elements fit within the viewport */
 * {
     max-width: 100%;
     box-sizing: border-box;
 }
+body , html{
+    background-color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 /* Navbar */
 .navbar{
     display: flex;
-    height: 7rem;
+    height: 8vw;
     background-color:white;
+    padding: 2vw 4vw;
 }
 .nav-link{
     color: #222222 !important;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1.7vw;
     font-weight: bold;
 }
 .nav-link:hover{
     color: #87CEEB !important;
 }
- .nav-btn{
+.nav-btn{
     font-weight: bold;
     background-color: #87CEEB;
-    font-size: 25px;
+    padding: 0.7vw 1.3vw;
 }
-/* Responsive for mobile */
-/* Navbar logo adjustments for smaller screens */
+.nav-btn:hover{
+    border: 3px solid #1434A4;
+}
 .navbar-brand img {
     max-width: 100%;
     height: auto;
 }
-
-/* Adjust navbar padding for better spacing */
-.navbar {
-    padding: 10px 20px;
-}
-
-/* Ensure the navbar links stack properly on mobile */
-@media (max-width: 768px) {
-    .navbar-brand img {
-        width: 200px; /* Reduce logo size for mobile */
-        height: auto;
-    }
-
-    .navbar-collapse {
-        text-align: center; /* Center align nav items */
-        background: white; /* Ensure visibility on collapse */
-        padding: 10px;
-    }
-
-    .navbar-nav {
-        width: 100%;
-    }
-
-    .nav-item {
-        margin: 5px 0;
-    }
-
-    .nav-btn {
-        width: 100%;
-        text-align: center;
-    }
-}
-@media (max-width: 768px) {
-    .navbar-collapse {
-        text-align: center;
-        background: white; /* Optional: Background for dropdown */
-    }
-    
-    .navbar-nav {
-        width: 100%;
-    }
-
-    .nav-item {
-        margin: 5px 0;
-    }
-
-    .nav-btn {
-        width: 100%;
-        margin-top: 10px;
-    }
-}
 .navbar-toggler {
-    border: none !important; /* Remove border */
+    border: none !important; 
     outline: none !important;
 }
-
 .navbar-toggler-icon {
-    background-color:transparent; /* Ensures it's visible */
+    background-color:transparent; 
     width: 30px;
     height: 30px;
     color: #000;
 }
-
-
 .subsidy{
     display: flex;
     align-items: center;
@@ -115,29 +64,13 @@ html {
 .subsidy a:hover{
     font-size: 1.6rem;
 }
-
-@media (max-width: 768px) {
-    .subsidy h4 {
-        font-size: 1.2rem; /* Slightly smaller on tablets */
-    }
-}
-
-@media (max-width: 576px) {
-    .subsidy h4 {
-        font-size: 1rem; /* Smaller font for mobile screens */
-    }
-}
-
 /* Hero section */
- /* Full viewport height for carousel */
  .carousel-item {
-    height: 100vh;
+    height: 80vh;
     background-size: cover;
     background-position: center;
     position: relative;
 }
-
-/* Centered text */
 .carousel-caption {
     position: absolute;
     top: 50%;
@@ -145,111 +78,88 @@ html {
     transform: translate(-50%, -50%);
     text-align: center;
 }
-
 .carousel-caption h1 {
     font-size: 3rem;
     font-weight: bold;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
-
 .carousel-caption p {
     font-size: 1.5rem;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
-
-/* Small arrow icons for navigation */
 .carousel-control-prev, .carousel-control-next {
     width: auto;
     height: 50px;
     top: 50%;
     transform: translateY(-50%);
 }
-
 .carousel-control-prev {
     margin-left: 20px; /* Adjust left margin */
 }
-
 .carousel-control-next {
     margin-right: 20px; /* Adjust right margin */
 }
-
 .carousel-control-prev i, .carousel-control-next i {
     font-size: 30px; /* Icon size */
     color: black; /* Black color icon */
 }
-/* Why solar 
- /* Section Styling */
- /* Wide Horizontal Line */
- .solar-wide-line {
-    width: 60%; /* Reduced width */
-    height: 10px;
-    background-color: #6c8ebf; /* Gray-blue color */
-    margin: 40px auto; /* Centered and added top margin */
-}
- .solar-benefits {
+/* Why solar */
+.solar-benefits {
     text-align: center;
-    padding: 50px 0;
-    height: 100vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0.1vw 0;
 }
- .solar-section {
-    text-align: center;
-    margin-top: 60px; 
-} 
+ .solar-wide-line {
+    width: 50vw; 
+    height: 10px;
+    background-color: #6c8ebf;
+    margin: 2rem auto; 
+}
 .solar-divider {
-    border-top: 4px dotted #6c8ebf; /* Bold dotted line */
+    border-top: 4px dotted #6c8ebf; 
     width: 90%;
-    margin: 40px auto;
+    margin: 2rem auto;
 }
 .solar-title {
-    font-size: 3.5rem;
+    font-size: 5vw;
     font-weight: bold;
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh; /* Centering the title */
-    margin-top: 90px;
 }
-
+.middle-section{
+    background-color:#87CEEB;
+    padding: 1vw 1.2vw;
+    border-radius: 1vw;
+}
 .solar-subtitle {
-    font-size: 3rem; /* Bigger size */
+    font-size: 4vw; 
     font-weight: bold;
-    margin-top: 30px;
 }
-
 .solar-description {
-    font-size: 1.5rem; /* Larger text */
+    font-size: 2vw;
     color: #555;
-    margin-top: 20px;
 }
-
-/* Extra spacing for middle part */
-.middle-section {
-    margin: 35px 0;
-}
-/* Benefits Grid */
 .solar-benefits-container {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Increased spacing */
-    margin-top: 50px;
+    gap: 3vw;
     flex-wrap: wrap;
+    margin-top: 1.3vw;
 }
-/* Bootstrap Card Styling */
 .benefit-item {
-    width: 220px; /* Adjust card width */
-    border: none; /* Remove default border */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); /* Light shadow */
+    width: 13vw; 
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-/* Hover Effect */
 .benefit-item:hover {
-    transform: translateY(-10px); /* Slight pop-up */
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25); /* Increased shadow */
+    transform: translateY(-10px);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
 }
 /* Card Image */
 .benefit-item img {
@@ -261,125 +171,28 @@ html {
 /* Text Styling */
 .card-text {
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.4vw;
     font-weight: bold;
     padding: 10px 0;
 }
-.benefit-item p {
-    margin-top: 15px;
-    font-size: 1.3rem; /* Bigger text */
-    font-weight: bold;
-}
-/* Responsive Design */
-@media (max-width: 992px) {
-    .solar-benefits {
-        padding: 40px 5%;
-        margin: 30px auto;
-    }
-
-    .solar-title {
-        font-size: 2.5rem;
-    }
-
-    .solar-subtitle {
-        font-size: 1.8rem;
-    }
-
-    .solar-description {
-        font-size: 1rem;
-    }
-
-    .solar-benefits-container {
-        gap: 15px;
-    }
-
-    .benefit-item {
-        width: 220px;
-    }
-}
-
-@media (max-width: 768px) {
-    .solar-benefits {
-        padding: 30px 3%;
-        margin: 20px auto;
-    }
-
-    .solar-title {
-        font-size: 2rem;
-    }
-
-    .solar-subtitle {
-        font-size: 1.5rem;
-    }
-
-    .solar-description {
-        font-size: 0.95rem;
-    }
-
-    .solar-divider {
-        width: 90%;
-    }
-
-    .benefit-item {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 576px) {
-    .solar-benefits {
-        padding: 20px 2%;
-    }
-
-    .solar-title {
-        font-size: 1.8rem;
-    }
-
-    .solar-subtitle {
-        font-size: 1.3rem;
-    }
-
-    .solar-description {
-        font-size: 0.9rem;
-    }
-
-    .solar-divider {
-        width: 95%;
-    }
-
-    .benefit-item {
-        width: 100%;
-        max-width: 280px;
-    }
-}
-
-                /*  ABOUT SECTION  */
-
 /* About Us Main Container */
 .about-us {
-    width: 100%; /* Full width */
-    margin-top: 80px; /* Added top margin */
+    width: 100%; 
+    margin-top: 80px; 
     padding: 50px 5%;
     background-color: #f8f9fa;
 }
-
-/* Left Side (Image) */
 .about-image-container {
-    padding: 20px; /* Added padding for spacing */
+    padding: 20px; 
 }
-
 .about-image {
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
-
-/* Right Side (Text) */
 .about-text {
     padding: 40px 50px; /* Added padding for better spacing */
 }
-
-/* About Us Heading */
 .about-heading {
     font-size: 2rem;
     font-weight: bold;
@@ -387,16 +200,72 @@ html {
     color: #0096FF;
     margin-bottom: 20px;
 }
-
-/* Text Styling */
 .about-text p {
     font-size: 1.2rem;
     color: #555;
     line-height: 1.8;
     margin-bottom: 15px;
 }
+@media (max-width: 768px) {
+    .navbar{
+        height: 22vw;
+    }
+    .navbar-brand img {
+        width: 38vw; 
+        height: auto;
+    }
+    .navbar-collapse {
+        text-align: center; 
+        background: white; 
+        padding: 10px;
+    }
+    .navbar-nav {
+        width: 100%;
+    }
+    .nav-item {
+        font-weight: bolder;
+        margin: 2vw 0;
+    }
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+    .subsidy h4 {
+        font-size: 1.2rem; /* Slightly smaller on tablets */
+    }
+    .subsidy a:hover{
+        font-size: 1rem;
+    }
+   
+    .benefit-item {
+        width: 30vw;
+    }
+    .card-text {
+        font-size: 3vw;
+    }
+    /* About Section */
+    .about-heading {
+        font-size: 1.6rem;
+        text-align: center; /* Center heading on mobile */
+    }
 
-/* Responsive Design */
+    .about-text,
+    .about-image-container {
+        padding: 20px; /* Keeping margin on smaller screens */
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+}
+@media (max-width: 576px) {
+    .subsidy h4 {
+        font-size: 1rem; /* Smaller font for mobile screens */
+    }
+}
+/* Responsive Design About Us only */
 @media (max-width: 992px) {
     .about-us {
         margin-top: 50px;
@@ -417,28 +286,8 @@ html {
         font-size: 1rem;
     }
 }
-
-@media (max-width: 768px) {
-    .about-heading {
-        font-size: 1.6rem;
-        text-align: center; /* Center heading on mobile */
-    }
-
-    .about-text,
-    .about-image-container {
-        padding: 20px; /* Keeping margin on smaller screens */
-    }
-
-    .about-text p {
-        font-size: 1rem;
-        text-align: center;
-    }
-}
-
-/*  Type of Solar Systems */
 /* Types of Solar Systems Main Container */
 .solar-types {
-    height: 100vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -552,7 +401,7 @@ html {
     padding: 40px;
     border-radius: 10px;
     max-width: 90%; /* Increased width */
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -609,7 +458,6 @@ html {
     line-height: 1.5;
     color:#212529 ;
 }
-
 .mb-3 {
     margin-bottom: 30px !important; /* Increased space between input elements */
 }
@@ -649,7 +497,6 @@ html {
 }
 /* Brand Partnerships Section */
 .brand-partners {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -673,40 +520,6 @@ html {
     object-fit: contain; /* Ensures proper scaling */
     border-radius: 10px;
 }
-
-/* FOOTER */
-.footer {
-    background-color:#A7C7E7; /* Baby blue */
-    padding: 30px 0;
-    margin-top: auto; /* Sticks footer to the bottom */
-    font-size: 18px;
-}
-.footer-logo {
-    width: 300px; /* Adjust logo size */
-}
-.footer a {
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-}
-.footer a:hover {
-   color: #007bff;
-}
-.contact-info {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: 18px;
-}
-.social-icons a {
-    font-size: 22px;
-    margin-right: 15px;
-    color: black;
-}
 h5{
     font-size: 20px;
-}
-
-.social-icons a:hover {
-    color: #007bff;
 }
