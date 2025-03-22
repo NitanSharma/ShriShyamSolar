@@ -404,9 +404,11 @@ body , html{
         margin: 2vw 0;
     }
     .nav-btn {
-        background-color: crimson;
         width: 100%;
         text-align: center;
+        padding: 3vw 0;
+        font-size: 18px !important;
+       
     }
     .subsidy h4 {
         font-size: 1.2rem; /* Slightly smaller on tablets */
