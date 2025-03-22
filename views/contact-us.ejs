@@ -17,17 +17,15 @@
             text-align: center;
         }
 
-         /* Full height container */
          .contact-container {
-            min-height: 100vh;
             display: flex;
             align-items: center;
         }
 
         /* Left Section */
         .contact-left {
-           color: black;
-            padding: 50px;
+            color: black;
+            padding: 2.5vw;
             border-radius: 10px 0 0 10px;
         }
 
@@ -66,6 +64,13 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            .contact-card{
+                padding: 5vw;
+                transition: transform 0.3s ease-in-out;
+            }
+            .contact-card:hover {
+            transform: scale(1.05);
+        }
             .contact-left {
                 border-radius: 10px 10px 0 0;
                 text-align: center;

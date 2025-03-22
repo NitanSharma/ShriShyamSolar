@@ -423,8 +423,8 @@ body , html{
         font-size: 5vw;
     }
     .parent-div {
-        /* height: auto; */
-        margin: auto;
+        /* margin: auto; */
+        margin: 20px;
     }
     .left-div {
         margin-bottom: 2vw;
