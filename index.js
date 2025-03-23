@@ -29,8 +29,8 @@ app.get("/register" , (req,res) => {
 })
 app.post("/register" , (req,res) => {
     console.log(req.body);
-    let {name , contact , city , requirement ,bill, msg } = req.body;
-    let newClient =  new Client({name ,contact , city , requirement , bill, msg});
+    let {name , contact , city , requirement ,bill, email,msg } = req.body;
+    let newClient =  new Client({name ,contact , city , requirement , bill, email ,msg});
     newClient.save().then((res) => {console.log(res)}).catch((err) => {console.log(err)});
     res.redirect("/");    
 })

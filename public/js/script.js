@@ -20,3 +20,10 @@
                     }, false);
                 });
             })();
+
+            console.log("*******")
+            let select = document.querySelector("#requirement");
+            select.addEventListener('change', () => {
+               select.style.color = "rgb(73,80,87)"
+               console.log("color changed")   
+            })

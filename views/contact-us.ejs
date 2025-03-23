@@ -4,7 +4,7 @@
     .banner {
             width: 90%;
             height: 500px;
-            background: url('contactbanner.avif') center/cover no-repeat;
+            background: url('/image/contactbanner.avif') center/cover no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -45,6 +45,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        .contact-card h5 a{
+            text-decoration: none;
+            color: black;
+        }
+        .contact-card h5 a:hover{
+            text-decoration: underline;
         }
 
         .contact-card:hover {
@@ -94,11 +101,11 @@
                 <h2 class="text-center">Get in Touch</h2>
                 <div class="contact-card w-75 my-2 p-3 ">
                     <h3>📞 Phone</h3>
-                    <h5>+91 7909579769 +91 8966969389</h5>
+                    <h5><a href="tel:7909579769">+91 7909579769</a> &nbsp; <a href="tel:8966969389">+91 8966969389</a></h5>
                 </div>
                 <div class="contact-card w-75 my-2 p-3">
                     <h3>📧 Email</h3>
-                    <h5>sssolar916@gmail.com</h5>
+                    <h5><a href="mailto:sssolar916@gmail.com">sssolar916@gmail.com</a></h5>
                 </div>
                 <div class="contact-card w-75 my-2 p-3">
                     <h3>📍 Address</h3>
@@ -160,10 +167,8 @@
                         <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">Please enter your message.</div>
                     </div>
-
                     <button type="submit" class="btn btn-info w-100">Submit</button>
                 </form>
-
             </div>
         </div>
     </div>
