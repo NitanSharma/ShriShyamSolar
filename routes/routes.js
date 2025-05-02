@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const {body} = require("express-validator");
-const registerController = require('../controllers/register.controller');
+const controller = require('../controllers/register.controller');
 
 router.get("/" , (req,res) => {
     res.render("home.ejs");
@@ -17,7 +17,7 @@ router.post("/register" ,
         body('email').isEmail().withMessage('Valid email is required'),
         body('msg').notEmpty().withMessage('Message is required')
     ]
-    , registerController );
+    , controller.registerController );
 
 router.get("/gallery", (req,res) => {
     res.render("gallery.ejs");
